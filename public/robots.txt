@@ -1,0 +1,5 @@
+# Allow all user agents.
+User-agent: *
+Allow: /
+
+Sitemap: https://quality-site.vercel.app/sitemap.xml

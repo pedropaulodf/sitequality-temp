@@ -1,0 +1,29 @@
+.sliderContainer{
+  width: calc(90vw - 40px);
+  max-width: 283px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1000px) {
+  .sliderContainer{
+    width: calc(57vw - 40px);
+  }
+}
+
+@media (max-width: 900px) {
+  .sliderContainer{
+    width: calc(52vw - 40px);
+  }
+}
+
+@media (max-width: 800px) {
+  .sliderContainer{
+    width: calc(45vw - 40px);
+  }
+}
+
+@media (max-width: 720px) {
+  .sliderContainer{
+    width: calc(90vw - 40px);
+  }
+}

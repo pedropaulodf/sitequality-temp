@@ -1,0 +1,46 @@
+.btn {
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  min-height: 50px;
+  border-radius: 100%;
+  margin: 0 -25px;
+  background-color: var(--blue-500);
+  box-shadow: 0px 0px 10px 0px #00000050;
+  font-size: 1rem;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+
+  transition: all 0.2s ease;
+
+  /* Seta da esquerda */
+  &:first-child {
+    &:active {
+      transform: translateX(-6px);
+    }
+  }
+
+  /* Seta da direita */
+  &:active {
+    transform: translateX(6px);
+  }
+
+  svg {
+    color: white;
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .btn {
+    margin: 0 -15px;
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+  }
+}

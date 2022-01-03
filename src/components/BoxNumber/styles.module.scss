@@ -1,0 +1,44 @@
+.container{
+
+  border: 1px solid #efefef;
+  border-radius: 0.7rem;
+  padding: 1rem 2rem 1rem 2rem;
+  box-shadow: 8px 9px 11px rgba(0, 0, 0, 0.03);
+  cursor: default;
+  
+  transition: all 0.2s ease;
+
+  background-color: var(--white);
+
+  &:hover {
+    transform: translateY(-10px) scale(1.02,1.02);
+    box-shadow: 0px 9px 11px rgba(0, 0, 0, 0.10);
+  }
+
+  p:first-child {
+    font-weight: 700;
+    background-color: var(--blue-400);
+    color: var(--white);
+    width: fit-content;
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+    font-size: 2rem;
+
+    margin-top: -2.8rem;
+  }
+
+  h4{
+    font-size: 2rem;
+    color: var(--blue-500);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  p{
+    font-size: 1.3rem;
+    color: var(--gray-500);
+    font-weight: 300;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}

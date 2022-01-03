@@ -1,0 +1,96 @@
+.openButtom {
+
+  &:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+
+  .iconButton {
+    width: 20px;
+    height: 20px;
+    margin-right: 0.5rem;
+    color: #ffffff;
+  }
+}
+
+.modal {
+
+  margin-top: 4rem;
+
+  .modalBox {
+
+    position: relative;
+    background-color: #ffffff;
+    padding: 1.8rem;
+    border-radius: 1rem;
+    box-shadow: 0px 6px 7px 2px #00000029;
+  
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+
+    .submitButtom {
+      width: 100%;
+      background-color: #3A75BB;
+      color: #ffffff;
+      border-radius: 0.5rem;
+      font-size: 1.2rem;
+      padding: 0.7rem 0.7rem;
+  
+      transition: all 0.2s ease;
+      
+      &:hover {
+        background-color: #19559b;
+      }
+    
+      &:active {
+        transform: scale(0.97);
+      }
+    }
+  
+    .closeButton{
+    
+      background-color: #83ABDA;
+    
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    
+      position: absolute;
+      right: 8px;
+      top: 8px;
+    
+      border-radius: 0.3rem 0.7rem 0.3rem 1.2rem;
+      padding: 0.5rem 0.5rem 0.7rem 0.7rem;
+     
+      transition: all 0.2s ease;
+    
+      &:hover {
+        background-color: #3E7CC5;
+      }
+  
+      svg {
+        color: #ffffff;
+        width: 20px;
+        height: 20px;
+      }
+    }
+    
+    h6 {
+      width: 100%;
+      text-align: center;
+      font-size: 1.8rem;
+      color: #3A75BB;
+    }
+  
+    form {
+      .inputBox{
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 1.3rem;
+      }
+
+    }
+  }
+}

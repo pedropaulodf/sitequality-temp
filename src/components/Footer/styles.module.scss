@@ -1,0 +1,26 @@
+.container {
+  background-color: var(--blue-500);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 3rem;
+
+  .bgLogo {
+    padding: 3rem 1rem;
+    
+    img {
+      width: 100%;
+    }
+  }
+
+  .bgRights {
+    width: 100%;
+    text-align: center;
+    background-color: var(--blue-600);
+    padding: 1rem 1rem;
+
+    color: var(--white);
+  }
+}

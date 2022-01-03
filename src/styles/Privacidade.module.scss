@@ -1,0 +1,36 @@
+.container {
+  .content {
+    width: 100%;
+
+    .terms {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+      position: relative;
+
+      p {
+        line-height: 1.3rem;
+        font-size: 1.2rem;
+        margin-bottom: 0.6rem;
+        font-weight: 300;
+      }
+
+      .title {
+        line-height: 3rem;
+        font-weight: 700;
+      }
+
+      ul {
+        margin-left: 40px;
+
+        li {
+          line-height: 1rem;
+          font-size: 1.2rem;
+          margin-bottom: 0.6rem;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+[
+  { "fileType": ".zip", "iconPath": "/images/fileIcons/zip.png" },
+  { "fileType": ".rar", "iconPath": "/images/fileIcons/zip.png" },
+  { "fileType": ".exe", "iconPath": "/images/fileIcons/exe.png" },
+  { "fileType": ".msi", "iconPath": "/images/fileIcons/msi.png" }
+]

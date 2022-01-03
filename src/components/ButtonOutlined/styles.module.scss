@@ -1,0 +1,20 @@
+.container {
+  width: 100%;
+  border: 1px solid var(--blue-500);
+  color: var(--blue-500);
+  padding: 0.7rem 1rem;
+  font-size: 1.2rem;
+  border-radius: 0.5rem;
+  background-color: #5d87c710;
+
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: var(--blue-500);
+    color: var(--white)
+  }
+
+  &:active {
+    transform: translateY(7px);
+  }
+}

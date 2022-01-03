@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:disabled {
+  cursor: not-allowed;
+}
+
+:root {
+  --white: #ffffff;
+  --gray-500: #8e8e8e;
+  --gray-600: #656565;
+  --blue-20: #3e7cc50f;
+  --blue-50: #eef4fc;
+  --blue-350: #7cafee;
+  --blue-400: #689cda;
+  --blue-500: #3e7cc5;
+  --blue-500-40: #3e7cc540;
+  --blue-600: #174e8f;
+  --green-700: #47a445;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 1080px) {
+  html {
+    font-size: 93.75%;
+  }
+}
+
+@media (max-width: 720px) {
+  html {
+    font-size: 87.5%;
+  }
+}
+
+@media (max-width: 340px) {
+  html {
+    font-size: 77.5%;
+  }
+}
+
+body {
+  background: var(--white);
+  color: var(--gray-700);
+}
+
+body,
+input,
+textarea,
+select,
+button {
+  font: 400 1rem "Lato", sans-serif;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+// Estilos do Placeholder
+::-webkit-input-placeholder {
+  color: var(--blue-500);
+}
+:-ms-input-placeholder {
+  color: var(--blue-500);
+}
+::placeholder {
+  color: var(--blue-500);
+}
+
+/* Styles do ajuste dos botões de baixo da slide */
+.react-slideshow-container + ul.indicators li {
+  width: 14px !important;
+  height: 8px !important;
+  padding: 10px !important;
+}
+
+.react-slideshow-container + ul.indicators .each-slideshow-indicator:before {
+  width: 14px !important;
+  height: 7px !important;
+  border-radius: 4px !important;
+}
+
+/* Ajuste do carousel para encaixar o tooltip no topo */
+.f1gemtg7 {
+  align-items: flex-end !important;
+  height: 160px;
+  gap: 1rem;
+}
+
+/* Styles SlideShow */
+.react-slideshow-wrapper.slide,.react-slideshow-fade-wrapper  {
+  border-radius: 0.6rem;
+  z-index: 0;
+}

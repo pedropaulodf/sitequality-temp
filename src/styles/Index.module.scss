@@ -1,0 +1,368 @@
+.container {
+  .wrapperBanner {
+    width: 100%;
+    background-color: var(--blue-20); //20
+
+    .banner {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+      position: relative;
+
+      display: grid;
+      grid-template-columns: 0.9fr 1fr;
+      gap: 0 2rem;
+
+      .info {
+        h1 {
+          font-size: 4rem;
+          color: var(--blue-500);
+          line-height: 4rem;
+        }
+
+        p {
+          font-size: 1.4rem;
+          color: var(--gray-600);
+          margin: 1rem 0;
+        }
+
+        button {
+          padding: 1rem 2rem;
+          border-radius: 0.5rem;
+          background-color: var(--blue-500-40);
+          color: var(--blue-500);
+          font-size: 1.2rem;
+
+          transition: all 0.2s ease;
+
+          &:hover {
+            filter: brightness(0.7);
+          }
+
+          &:active {
+            transform: translateY(3px);
+          }
+        }
+      }
+
+      .sliderWrapper {
+        position: relative;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .bgSliderCircle {
+          width: 100%;
+          min-width: 400px;
+          height: 120%;
+          border-radius: 100%;
+
+          background-color: #3e7cc510;
+
+          position: absolute;
+          z-index: 0;
+        }
+      }
+    }
+  }
+
+  // Faixa App do Socio
+  .wrapperSliderApp {
+    width: 100%;
+    background-color: var(--blue-20); //20
+    margin-top: 1rem;
+
+    .strip {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+      position: relative;
+
+      display: grid;
+      grid-template-columns: 0.5fr 1fr;
+      grid-template-areas: "sliderWrapper info";
+      gap: 0 4rem;
+
+      .info {
+        align-self: center;
+        grid-area: info;
+        h1 {
+          font-size: 3rem;
+          color: var(--blue-500);
+          line-height: 4rem;
+        }
+
+        p {
+          font-size: 1.3rem;
+          color: var(--gray-600);
+          margin: 1rem 0;
+
+          ul {
+            margin-top: 1rem;
+            margin-left: 1.3rem;
+            font-size: 1.2rem;
+          }
+        }
+
+        .appStoreBadges {
+          display: flex;
+          gap: 1rem;
+          margin-top: 3rem;
+          a {
+            img {
+              width: 100%;
+            }
+          }
+        }
+      }
+
+      .sliderWrapper {
+        grid-area: sliderWrapper;
+        position: relative;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .bgSliderCircle {
+          width: 100%;
+          min-width: 400px;
+          height: 120%;
+          border-radius: 100%;
+
+          background-color: #3e7cc510;
+
+          position: absolute;
+          z-index: 0;
+        }
+      }
+    }
+  }
+
+  // Faixa Clientes da Quality
+  .wrapperCustomers {
+    width: 100%;
+    background-color: #f7fafd;
+
+    margin-top: 1.5rem;
+
+    .content {
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      padding: 2rem 2rem;
+
+      h3 {
+        color: var(--gray-600);
+        text-align: center;
+        margin: 0 0 2rem 0;
+        font-size: 1.8rem;
+        font-weight: 400;
+      }
+
+      // TEMPORÁRIO
+      .sliderWrapper {
+        position: relative;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .slider {
+          width: 100%;
+        }
+      }
+      // TEMPORÁRIO
+    }
+  }
+
+  // Por que a Quality
+  .wrapperWhyQuality {
+    width: 100%;
+
+    .content {
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      padding: 2rem 2rem;
+
+      h3 {
+        color: var(--gray-600);
+        text-align: center;
+        margin: 1rem 0 3rem 0;
+        font-size: 2.2rem;
+        font-weight: 700;
+      }
+
+      .gridBoxes {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        padding-top: 2rem;
+      }
+    }
+  }
+
+  // Diferenciais
+  .wrapperDiferentials {
+    width: 100%;
+    background-color: #eef4fc;
+    margin-top: 2rem;
+
+    .content {
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      padding: 3rem 3rem 4rem 3rem;
+
+      h3 {
+        color: var(--blue-500);
+        text-align: center;
+        font-size: 2.2rem;
+        font-weight: 700;
+      }
+
+      .gridBoxes {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+        padding-top: 2rem;
+      }
+    }
+  }
+
+  // Recursos
+  .wrapperResources {
+    width: 100%;
+
+    .content {
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      padding: 2rem 2rem;
+
+      h3 {
+        color: var(--gray-600);
+        text-align: center;
+        margin: 1rem 0 3rem 0;
+        font-size: 2.2rem;
+        font-weight: 700;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 2rem;
+        padding-top: 2rem;
+
+        div img {
+          width: 100%;
+          margin-top: -1rem;
+        }
+      }
+    }
+  }
+}
+
+.btnGreenContact{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 1rem 5rem 1rem;
+}
+
+@media (max-width: 720px) {
+  .container {
+    .wrapperBanner {
+      .banner {
+        gap: 2rem 0rem;
+        grid-template-columns: 1fr;
+        padding: 2rem 2rem;
+
+        .sliderWrapper {
+          .slider {
+            width: 100%;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+
+            .btnPrevNext {
+              margin: 0 -15px;
+            }
+          }
+
+          .bgSliderCircle {
+            width: 90vw;
+            height: 110%;
+            min-width: 100%;
+          }
+        }
+      }
+    }
+
+    .wrapperSliderApp {
+      .strip {
+        padding: 4rem 2rem;
+        grid-template-columns: 1fr;
+        gap: 3rem 0;
+        grid-template-areas: "info" "sliderWrapper";
+  
+        .sliderWrapper {  
+          .bgSliderCircle {
+            width: 100%;
+            min-width: 100%;
+          }
+        }
+      }
+    }
+
+    // Por que a Quality
+    .wrapperWhyQuality {
+      .content {
+        .gridBoxes {
+          grid-template-columns: 1fr;
+          gap: 4rem;
+        }
+      }
+    }
+
+    // Diferenciais
+    .wrapperDiferentials {
+      .content {
+
+        padding: 3rem 2rem 4rem 2rem;
+
+        .gridBoxes {
+          grid-template-columns: repeat(1, 1fr);
+          gap: 1rem;
+          padding-top: 2rem;
+        }
+      }
+    }
+
+    // Recursos
+    .wrapperResources {
+      .content {
+        .grid {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 2rem;
+          padding-top: 0rem;
+
+          .imgResources {
+            display: none;
+          }
+
+          div img {
+            width: 40%;
+            margin: 0 auto;
+            margin-top: -1rem;
+          }
+        }
+      }
+    }
+  }
+}

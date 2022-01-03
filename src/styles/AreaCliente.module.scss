@@ -1,0 +1,391 @@
+.bgTitle {
+  background-color: #3a75bb;
+  color: var(--white);
+  text-align: center;
+  padding: 2rem 1rem;
+
+  p {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+}
+
+.loading {
+  text-align: center;
+  font-size: 1.7rem;
+  color: var(--gray-500);
+  padding: 1rem;
+}
+
+.emoji {
+  font-weight: 100;
+}
+
+.container {
+  width: 100%;
+  padding: 0 2rem;
+
+  .wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+
+    .content {
+      .topSection {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 3rem 0;
+
+        h3 {
+          color: var(--gray-600);
+          font-size: 2.3rem;
+          span {
+            color: var(--blue-500);
+          }
+        }
+
+        button {
+          display: flex;
+          align-items: center;
+          padding: 0 2.2rem 0 0;
+          border-radius: 0.5rem;
+          background-color: rgb(252, 210, 210);
+          color: #a53131;
+          font-size: 1.3rem;
+
+          div {
+            padding: 0.8rem;
+            color: #a53131;
+            background-color: #f8b0b0;
+            margin-right: 2rem;
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 1.5rem;
+          }
+
+          &:hover {
+            filter: brightness(1.05);
+          }
+
+          &:active {
+            transform: translateX(3px);
+          }
+        }
+      }
+
+      .tabContainer {
+        margin-top: 4rem;
+      }
+
+      .boxInputButtonCopy {
+        display: flex;
+        flex-direction: column;
+
+        label {
+          font-weight: 700;
+          color: var(--gray-500);
+          font-size: 1.1rem;
+          margin-bottom: 0.5rem;
+        }
+
+        textarea {
+          background-color: #00000010;
+          border: none;
+          padding: 0.8rem 120px 0.8rem 0.8rem;
+          border-radius: 0.5rem;
+          width: 100%;
+          max-width: 500px;
+          color: var(--gray-500);
+          font-size: 1.1rem;
+          height: auto;
+          vertical-align: middle;
+          resize: none;
+        }
+
+        button {
+          background-color: var(--blue-500);
+          color: var(--white);
+          padding: 0.5rem 0.8rem;
+          border-radius: 0.5rem;
+          font-size: 0.8rem;
+          width: 120px;
+          margin-left: -130px;
+          margin-top: -2px;
+
+          &:active {
+            transform: translateY(3px);
+          }
+        }
+      }
+
+      .boxInput {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+
+        label {
+          font-weight: 700;
+          color: var(--gray-500);
+          font-size: 1.1rem;
+          margin-bottom: 0.5rem;
+        }
+
+        input {
+          background-color: #00000010;
+          border: none;
+          padding: 0.8rem;
+          border-radius: 0.5rem 0.5rem 0 0;
+          width: 100%;
+          max-width: 500px;
+          color: var(--gray-500);
+          font-size: 1.2rem;
+          height: auto;
+          vertical-align: middle;
+          resize: none;
+          text-align: center;
+        }
+
+        .expirationMessage {
+          background-color: #00000019;
+          color: var(--gray-500);
+          padding: 0.5rem 0.8rem;
+          border-radius: 0 0 0.5rem 0.5rem;
+          font-size: 0.9rem;
+          width: 100%;
+          max-width: 500px;
+          text-align: center;
+        }
+
+        .expirationMessageRed {
+          background-color: #fcd2d2;
+          color: #a53131;
+          padding: 0.5rem 0.8rem;
+          border-radius: 0 0 0.5rem 0.5rem;
+          font-size: 0.9rem;
+          width: 100%;
+          max-width: 500px;
+          text-align: center;
+          font-weight: 700;
+        }
+      }
+
+      .boxInputButtonCopyTabData {
+        display: flex;
+        flex-direction: column;
+
+        & + .boxInputButtonCopyTabData {
+          margin-top: 1.5rem;
+        }
+
+        label {
+          font-weight: 700;
+          color: var(--gray-500);
+          font-size: 1.1rem;
+          margin-bottom: 0.5rem;
+        }
+
+        textarea {
+          background-color: #00000010;
+          border: none;
+          padding: 0.8rem 120px 0.8rem 0.8rem;
+          border-radius: 0.5rem;
+          width: 100%;
+          color: var(--gray-500);
+          font-size: 1.1rem;
+          height: 44px;
+          vertical-align: middle;
+          resize: none;
+          overflow: hidden;
+        }
+
+        button {
+          background-color: var(--blue-500);
+          color: var(--white);
+          padding: 0.4rem 0.8rem;
+          border-radius: 0.5rem;
+          font-size: 0.8rem;
+          width: 70px;
+          margin-left: -80px;
+          margin-top: -2px;
+
+          &:active {
+            transform: translateY(3px);
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Estilos da Tab */
+.tabList {
+  border-bottom: 1px solid #00000010;
+  padding: 0;
+}
+.tabs {
+  border-bottom: 1px solid #00000010;
+  border-radius: 0 0 7px 7px;
+}
+.tab {
+  display: inline-block;
+  border: 1px solid transparent;
+  border-bottom: none;
+  position: relative;
+  list-style: none;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  color: var(--gray-500);
+  background-color: var(--white);
+  border-radius: 0.5rem 0.5rem 0 0;
+
+  &:hover {
+    background-color: #00000008;
+  }
+}
+.tabSelected {
+  background-color: var(--white) !important;
+  border-top: 5px solid var(--blue-500);
+  border-radius: 5px 5px 0 0;
+  color: var(--blue-500);
+  bottom: -1px;
+  border-left: 1px solid #00000010;
+  border-right: 1px solid #00000010;
+}
+.tabPanel {
+  border-top: none;
+  border-left: 1px solid #00000010;
+  border-right: 1px solid #00000010;
+  border-radius: 0 0 6px 6px;
+
+  .boxTabContainer {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .boxInputButtonCopyTabData {
+    textarea {
+      height: auto !important;
+    }
+  }
+  .container {
+    .wrapper {
+      .content {
+        .topSection {
+          display: flex;
+          flex-direction: column;
+          gap: 2rem;
+          margin-bottom: -1.5rem;
+
+          button {
+            align-self: flex-end;
+            font-size: 1rem;
+            padding-right: 1rem;
+            div {
+              padding: 0.5rem;
+              font-size: 1.1rem;
+              margin-right: 0.7rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.table {
+  // border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.table caption {
+  font-size: 1.5rem;
+  margin: 0.5rem 0 0.75rem;
+}
+
+.table tr {
+  // background-color: #f8f8f8;
+  border-bottom: 1px solid #efefef;
+  padding: 0.35rem;
+}
+
+.table th,
+.table td {
+  padding: 0.625rem;
+  text-align: left;
+  color: var(--gray-500);
+}
+
+.table th {
+  font-size: 1rem;
+  // letter-spacing: .1rem;
+  // text-transform: uppercase;
+  font-weight: 700;
+  border-bottom: 2px solid #00000020;
+}
+
+@media screen and (max-width: 730px) {
+  .tabPanel {
+    .boxTabContainer {
+      padding: 1rem;
+    }
+  }
+
+  .table {
+    border: 0;
+  }
+
+  .table caption {
+    font-size: 1.3rem;
+  }
+
+  .table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  .table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: 0.625rem;
+    padding: 0;
+  }
+
+  .table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: 1rem;
+    text-align: right;
+  }
+
+  .table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a .table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+  }
+
+  .table td:last-child {
+    border-bottom: 0;
+  }
+}

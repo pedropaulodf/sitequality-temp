@@ -1,0 +1,68 @@
+.container {
+  padding: 0.7rem;
+  border-radius: 0.7rem;
+  border: 1px dashed #3e7cc552;
+
+  label {
+    width: 100%;
+    font-size: 1.2rem;
+  }
+
+  .input {
+    width: 100%;
+    color: #3e7cc5;
+    background-color: #eef3fa;
+    border: none;
+    padding: 0.7rem 1rem;
+    font-size: 1.2rem;
+    border-radius: 0.5rem;
+    border-left: 8px solid var(--blue-500);
+    margin-top: 0.5rem;
+
+    transition: all 0.2s ease;
+
+    &:hover {
+      filter: brightness(0.97);
+    }
+  }
+
+  textarea {
+    width: 100%;
+
+    resize: none;
+    overflow: hidden;
+    min-height: 120px;
+
+    color: #3e7cc5;
+    background-color: #eef3fa;
+    border: none;
+    padding: 0.7rem 1rem;
+    font-size: 1.2rem;
+    border-radius: 0.5rem;
+    border-left: 8px solid var(--blue-500);
+    margin-top: 0.5rem;
+
+    transition: all 0.2s ease;
+
+    &:hover {
+      filter: brightness(0.97);
+    }
+  }
+
+  .containerClass {
+    background-color: #ffc1c1 !important;
+  }
+  
+}
+
+// Invalid classes
+.invalidIcon {
+  background-color: #ffc1c1 !important;
+  color: #e96666 !important;
+  border-left: 8px solid #e96666 !important;
+}
+
+.invalid {
+  background-color: #ffd9d9 !important;
+  border-left: 8px solid #e96666 !important;
+}
