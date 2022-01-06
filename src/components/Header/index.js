@@ -32,6 +32,12 @@ export function Header() {
     const temeSelected = localStorage.getItem("theme");
     if (temeSelected === null) {
       localStorage.setItem("theme", "light");
+      
+      // dark mode is active?
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        setIsDarkModeActive(true);
+      }
+
     } else {
       document.body.dataset.theme = temeSelected;
       if (temeSelected === "dark") {
@@ -39,9 +45,16 @@ export function Header() {
       }
     }
 
+    // Lida com a troca de tema automatica
+    const handleDarkMode = (e) => {
+      const newColorScheme = e.matches ? "dark" : "light";
+      setIsDarkModeActive(newColorScheme === "dark" ? true : false);
+    }
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', handleDarkMode);
+
     return () => {
       window.removeEventListener("resize", handleResize);
-      // window.removeEventListener("change", handleDarkMode);
+      window.removeEventListener("change", handleDarkMode);
     };
   }, []);
 
