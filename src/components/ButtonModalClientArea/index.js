@@ -53,7 +53,7 @@ const ButtonModalClientArea = ({ handleCloseMenu }) => {
 
   return (
     <ReactCircleModal
-      backgroundColor="#3e7cc5f2"
+      backgroundColor="#032d5ef0"
       toogleComponent={(onClick) => (
         <button
           type="button"
