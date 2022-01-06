@@ -205,7 +205,7 @@
             }
 
             &.active {
-              background-color: #0d3b7217;
+              background-color: #3e7cc533;
               // border: 2px solid #3e7cc555;
             }
           }
@@ -213,7 +213,7 @@
       }
 
       button {
-        background-color: #3e7cc5;
+        background-color: var(--blue-500);
         border: none;
         display: flex;
         justify-content: center;
