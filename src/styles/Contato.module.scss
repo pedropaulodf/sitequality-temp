@@ -54,7 +54,7 @@
       .contact {
         width: 100%;
         height: fit-content;
-        border: 1px solid #d8d8d8;
+        border: 1px solid #3e7cc545;
         box-shadow: 8px 9px 11px 0px #00000008;
         border-radius: 0.8rem;
         padding: 1.8rem 1.3rem;
@@ -62,7 +62,7 @@
 
         margin-top: 2.5rem;
 
-        background-color: #ffffff90;
+        background-color: #ffffff12;
 
         h3 {
           font-size: 1.4rem;
@@ -71,6 +71,7 @@
         }
 
         p {
+          color: var(--gray-500);
           & + p {
             margin-top: 0.2rem;
           }

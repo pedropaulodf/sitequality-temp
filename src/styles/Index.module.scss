@@ -114,6 +114,7 @@
           a {
             img {
               width: 100%;
+              border-radius: 8px;
             }
           }
         }
@@ -145,7 +146,7 @@
   // Faixa Clientes da Quality
   .wrapperCustomers {
     width: 100%;
-    background-color: #f7fafd;
+    background-color: var(--blue-20);
 
     margin-top: 1.5rem;
 
@@ -209,7 +210,7 @@
   // Diferenciais
   .wrapperDiferentials {
     width: 100%;
-    background-color: #eef4fc;
+    background-color: var(--blue-05);
     margin-top: 2rem;
 
     .content {

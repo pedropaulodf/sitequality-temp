@@ -1,5 +1,5 @@
 .boxProduct {
-  border: 1px solid #00000010;
+  border: 1px solid #cbcbcb66;
   border-radius: 0.5rem;
   padding: 0.4rem 0.4rem 1.5rem 0.4rem;
 
@@ -11,7 +11,7 @@
   }
 
   .boxProductName {
-    background-color: var(--blue-50);
+    background-color: #689cda1f;
     border-radius: 0.4rem;
     padding: 1.2rem;
     margin-bottom: 1.5rem;
@@ -32,6 +32,7 @@
     img {
       width: fit-content;
       max-width: 90%;
+      border-radius: 5px;
     }
   }
 }

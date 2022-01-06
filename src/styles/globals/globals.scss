@@ -8,11 +8,70 @@
   cursor: not-allowed;
 }
 
-:root {
+// :root {
+//   --bg-color: #ffffff;
+//   --bg-gradient-strip-color: #f7fafd;
+//   --bg-menu-color: #ffffffeb;
+//   --white: #ffffff;
+//   --gray-500: #8e8e8e;
+//   --gray-600: #656565;
+//   --blue-20: #3e7cc50f;
+//   --blue-05: #3e7cc524;
+//   --blue-50: #eef4fc;
+//   --blue-350: #7cafee;
+//   --blue-400: #689cda;
+//   --blue-500: #3e7cc5;
+//   --blue-500-40: #3e7cc540;
+//   --blue-600: #174e8f;
+//   --green-700: #47a445;
+// }
+
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     --bg-color: #00142D;
+//     --bg-gradient-strip-color: #041a36;
+//     --bg-menu-color: #181818eb;
+//     --white: #ffffff;
+//     --gray-500: #afafaf;
+//     --gray-600: #838383;
+//     --blue-20: #3e7cc50f;
+//     --blue-05: #3e7cc524;
+//     --blue-50: #eef4fc;
+//     --blue-350: #7cafee;
+//     --blue-400: #689cda;
+//     --blue-500: #3e7cc5;
+//     --blue-500-40: #3e7cc540;
+//     --blue-600: #174e8f;
+//     --green-700: #47a445;
+//   }
+// }
+body[data-theme="light"] {
+  --bg-color: #ffffff;
+  --bg-gradient-strip-color: #f7fafd;
+  --bg-menu-color: #ffffffeb;
   --white: #ffffff;
   --gray-500: #8e8e8e;
   --gray-600: #656565;
   --blue-20: #3e7cc50f;
+  --blue-05: #3e7cc524;
+  --blue-50: #eef4fc;
+  --blue-350: #7cafee;
+  --blue-400: #689cda;
+  --blue-500: #3e7cc5;
+  --blue-500-40: #3e7cc540;
+  --blue-600: #174e8f;
+  --green-700: #47a445;
+}
+
+body[data-theme="dark"] {
+  --bg-color: #00142D;
+  --bg-gradient-strip-color: #041a36;
+  --bg-menu-color: #181818eb;
+  --white: #ffffff;
+  --gray-500: #afafaf;
+  --gray-600: #838383;
+  --blue-20: #3e7cc50f;
+  --blue-05: #3e7cc524;
   --blue-50: #eef4fc;
   --blue-350: #7cafee;
   --blue-400: #689cda;
@@ -45,7 +104,7 @@ html {
 }
 
 body {
-  background: var(--white);
+  background: var(--bg-color);
   color: var(--gray-700);
 }
 
@@ -89,6 +148,7 @@ a {
   width: 14px !important;
   height: 7px !important;
   border-radius: 4px !important;
+  background: #858585 !important;
 }
 
 /* Ajuste do carousel para encaixar o tooltip no topo */

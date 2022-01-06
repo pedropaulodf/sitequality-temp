@@ -1,11 +1,11 @@
 .container{
 
-  border: 1px solid #efefef;
+  border: 1px solid #ffffff0f;
   border-radius: 0.7rem;
   padding: 0 2rem 0 0;
   box-shadow: 8px 9px 11px rgba(0, 0, 0, 0.03);
   cursor: default;
-  background-color: var(--white);
+  background-color: var(--bg-gradient-strip-color);
   display: flex;
 
   transition: all 0.2s ease;
@@ -26,9 +26,7 @@
     border-radius: 0.7rem 0 0 0.7rem;
   }
 
-  .content {
-    
-  }
+  // .content {}
 
   .icon {
     font-weight: 700;

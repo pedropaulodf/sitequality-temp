@@ -94,7 +94,7 @@
         }
 
         textarea {
-          background-color: #00000010;
+          background-color: #8989891f;
           border: none;
           padding: 0.8rem 120px 0.8rem 0.8rem;
           border-radius: 0.5rem;
@@ -136,7 +136,7 @@
         }
 
         input {
-          background-color: #00000010;
+          background-color: #8989891f;
           border: none;
           padding: 0.8rem;
           border-radius: 0.5rem 0.5rem 0 0;
@@ -151,7 +151,7 @@
         }
 
         .expirationMessage {
-          background-color: #00000019;
+          background-color: #87878733;
           color: var(--gray-500);
           padding: 0.5rem 0.8rem;
           border-radius: 0 0 0.5rem 0.5rem;
@@ -190,7 +190,7 @@
         }
 
         textarea {
-          background-color: #00000010;
+          background-color: #8989891f;
           border: none;
           padding: 0.8rem 120px 0.8rem 0.8rem;
           border-radius: 0.5rem;
@@ -224,11 +224,11 @@
 
 /* Estilos da Tab */
 .tabList {
-  border-bottom: 1px solid #00000010;
+  border-bottom: 1px solid #3a75bb1c;
   padding: 0;
 }
 .tabs {
-  border-bottom: 1px solid #00000010;
+  border-bottom: 1px solid #3a75bb1c;
   border-radius: 0 0 7px 7px;
 }
 .tab {
@@ -240,7 +240,7 @@
   padding: 1rem 2rem;
   cursor: pointer;
   color: var(--gray-500);
-  background-color: var(--white);
+  background-color: #ffffff08;
   border-radius: 0.5rem 0.5rem 0 0;
 
   &:hover {
@@ -248,7 +248,7 @@
   }
 }
 .tabSelected {
-  background-color: var(--white) !important;
+  background-color: #ffffff12 !important;
   border-top: 5px solid var(--blue-500);
   border-radius: 5px 5px 0 0;
   color: var(--blue-500);
@@ -258,8 +258,8 @@
 }
 .tabPanel {
   border-top: none;
-  border-left: 1px solid #00000010;
-  border-right: 1px solid #00000010;
+  border-left: 1px solid #3a75bb1c;
+  border-right: 1px solid #3a75bb1c;
   border-radius: 0 0 6px 6px;
 
   .boxTabContainer {
@@ -314,7 +314,7 @@
 
 .table tr {
   // background-color: #f8f8f8;
-  border-bottom: 1px solid #efefef;
+  border-bottom: 1px solid #d1d1d161;
   padding: 0.35rem;
 }
 
@@ -330,7 +330,7 @@
   // letter-spacing: .1rem;
   // text-transform: uppercase;
   font-weight: 700;
-  border-bottom: 2px solid #00000020;
+  border-bottom: 2px solid #8f8f8f6e;
 }
 
 @media screen and (max-width: 730px) {

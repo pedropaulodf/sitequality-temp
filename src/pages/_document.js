@@ -14,7 +14,7 @@ export default class MyDocument extends Document {
           <link rel="shortcut icon" href="/favicon.png" type="image/png" />
           <meta name="theme-color" content="#3e7cc5"></meta>
         </Head>
-        <body>
+        <body data-theme="light">
           <Main />
           <NextScript />
         </body>
