@@ -31,8 +31,6 @@ export const Carousel = (props) => {
             <img
               src={logo.imagePath}
               ref={customerLogo}
-              data-tooltip="Tooltip help here!"
-              data-flow="top"
               className={styles.clientLogo}
               alt={`Logo ${logo.name}`}
             />
