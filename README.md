@@ -3,7 +3,7 @@
 Site desenhado e desenvolvido por mim. :grinning:
 
 <p align="center">
-  <img alt="Print do projeto" src=".github/img.jpg" width="100%">
+  <img alt="Print do projeto" src=".github/img1.jpg" width="100%">
 </p>
 A empresa possuía um site antigo e resolvi criar um novo, com um layout moderno, bonito, responsivo, rápido e que fosse altamente indexado pelos motores de busca.
 
