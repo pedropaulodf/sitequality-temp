@@ -2,6 +2,9 @@
 
 Site desenhado e desenvolvido por mim. :grinning:
 
+<p align="center">
+  <img alt="Print do projeto" src=".github/img.jpg" width="100%">
+</p>
 A empresa possuía um site antigo e resolvi criar um novo, com um layout moderno, bonito, responsivo, rápido e que fosse altamente indexado pelos motores de busca.
 
 Ver projetos: 
@@ -10,16 +13,16 @@ Ver projetos:
 [<img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white">](https://sitequalityportfolio.vercel.app/)
 
 ## :rocket: Tecnologias
-- Figma
-- Next.js
-- Sass
-- date-fns
-- react-accessible-accordion
-- react-circle-modal
-- react-hook-form
-- react-toastify
-- rerousel
-- react-icons
-- react-phone-input-2
-- react-slideshow-image
-- react-tabs
+- [x] Figma
+- [x] Next.js
+- [x] Sass
+- [x] date-fns
+- [x] react-accessible-accordion
+- [x] react-circle-modal
+- [x] react-hook-form
+- [x] react-toastify
+- [x] rerousel
+- [x] react-icons
+- [x] react-phone-input-2
+- [x] react-slideshow-image
+- [x] react-tabs
