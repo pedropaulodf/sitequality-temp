@@ -7,8 +7,11 @@ import GoogleMapQuality from "../components/GoogleMapQuality";
 import HeadCustom from "../components/HeadCustom";
 
 import styles from "../styles/Contato.module.scss";
+import { useState } from "react";
 
 export default function Contato() {
+  const [isSending, setIsSending] = useState(false);
+
   const {
     // register,
     handleSubmit,
@@ -17,6 +20,7 @@ export default function Contato() {
   } = useForm();
 
   const onSubmit = (formData) => {
+    setIsSending(true);
     // alert(JSON.stringify(formData));
 
     // fetch("https://formsubmit.co/ajax/seueemailaqui@email.com", {
@@ -36,7 +40,7 @@ export default function Contato() {
         pais: formData.pais,
         estado: formData.estado,
         cidade: formData.cidade,
-        _cc: "eduardo@qualitysys.com.br,pedro@qualitysys.com.br",
+        // _cc: "eduardo@qualitysys.com.br,pedro@qualitysys.com.br",
       }),
     })
       .then((response) => response.json())
@@ -44,12 +48,14 @@ export default function Contato() {
         if (data && data.success) {
           toastSuccess("E-mail enviado!", 3000);
         }
+        setIsSending(false);
       })
       .catch((error) => {
         console.log(error);
         if (error) {
           toastError("E-mail não foi enviado!", 3000);
         }
+        setIsSending(false);
       });
   };
 
@@ -199,7 +205,10 @@ export default function Contato() {
                     />
                   )}
                 />
-                <button type="submit">Enviar contato</button>
+                <button type="submit" disabled={isSending}>
+                  {" "}
+                  {isSending ? "Enviando..." : "Enviar contato"}
+                </button>
               </form>
             </div>
             <div className={styles.contact}>
