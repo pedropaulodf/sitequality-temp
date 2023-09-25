@@ -40,7 +40,7 @@ export default function Contato() {
         pais: formData.pais,
         estado: formData.estado,
         cidade: formData.cidade,
-        // _cc: "eduardo@qualitysys.com.br,pedro@qualitysys.com.br",
+        _cc: "pedro@qualitysys.com.br",
       }),
     })
       .then((response) => response.json())
@@ -205,8 +205,11 @@ export default function Contato() {
                     />
                   )}
                 />
-                <button type="submit" disabled={isSending}>
-                  {" "}
+                <button
+                  type="submit"
+                  disabled={isSending}
+                  style={{ opacity: isSending ? 0.5 : 1 }}
+                >
                   {isSending ? "Enviando..." : "Enviar contato"}
                 </button>
               </form>
