@@ -12,55 +12,55 @@ export function Header() {
   const [isResponsiveMenuOpen, setIsResponsiveMenuOpen] = useState(false);
   const [isDarkModeActive, setIsDarkModeActive] = useState(false);
   const [sizeScreen, setSizeScreen] = useState({
-    width: undefined,
-    height: undefined,
+    width: 3000,
+    height: 3000,
   });
 
-  // useEffect(() => {
-  //   const handleResize = () => {
-  //     setSizeScreen({
-  //       width: window.innerWidth,
-  //       height: window.innerHeight,
-  //     });
-  //   };
-  //   handleResize();
-  //   window.addEventListener("resize", handleResize);
+  useEffect(() => {
+    const handleResize = () => {
+      setSizeScreen({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
 
-  //   // TEMA
+    // TEMA
 
-  //   // Verifica se é a primeira vez que a pessoa acessa e seta o tema no storage como light, que é o tema padrão
-  //   const temeSelected = localStorage.getItem("theme");
-  //   if (temeSelected === null) {
-  //     localStorage.setItem("theme", "light");
+    // // Verifica se é a primeira vez que a pessoa acessa e seta o tema no storage como light, que é o tema padrão
+    // const temeSelected = localStorage.getItem("theme");
+    // if (temeSelected === null) {
+    //   localStorage.setItem("theme", "light");
 
-  //     // dark mode is active?
-  //     if (
-  //       window.matchMedia &&
-  //       window.matchMedia("(prefers-color-scheme: dark)").matches
-  //     ) {
-  //       setIsDarkModeActive(true);
-  //     }
-  //   } else {
-  //     document.body.dataset.theme = temeSelected;
-  //     if (temeSelected === "dark") {
-  //       setIsDarkModeActive(true);
-  //     }
-  //   }
+    //   // dark mode is active?
+    //   if (
+    //     window.matchMedia &&
+    //     window.matchMedia("(prefers-color-scheme: dark)").matches
+    //   ) {
+    //     setIsDarkModeActive(true);
+    //   }
+    // } else {
+    //   document.body.dataset.theme = temeSelected;
+    //   if (temeSelected === "dark") {
+    //     setIsDarkModeActive(true);
+    //   }
+    // }
 
-  //   // Lida com a troca de tema automatica
-  //   const handleDarkMode = (e) => {
-  //     const newColorScheme = e.matches ? "dark" : "light";
-  //     setIsDarkModeActive(newColorScheme === "dark" ? true : false);
-  //   };
-  //   window
-  //     .matchMedia("(prefers-color-scheme: dark)")
-  //     .addEventListener("change", handleDarkMode);
+    // // Lida com a troca de tema automatica
+    // const handleDarkMode = (e) => {
+    //   const newColorScheme = e.matches ? "dark" : "light";
+    //   setIsDarkModeActive(newColorScheme === "dark" ? true : false);
+    // };
+    // window
+    //   .matchMedia("(prefers-color-scheme: dark)")
+    //   .addEventListener("change", handleDarkMode);
 
-  //   return () => {
-  //     window.removeEventListener("resize", handleResize);
-  //     window.removeEventListener("change", handleDarkMode);
-  //   };
-  // }, []);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      // window.removeEventListener("change", handleDarkMode);
+    };
+  }, []);
 
   useEffect(() => {
     if (sizeScreen.width > 1020 && isResponsiveMenuOpen) {
