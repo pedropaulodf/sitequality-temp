@@ -10,11 +10,11 @@
   },
   "dependencies": {
     "date-fns": "^2.27.0",
-    "next": "12.0.1",
-    "react": "17.0.2",
+    "next": "^13.5.2",
+    "react": "^18.2.0",
     "react-accessible-accordion": "^4.0.0",
     "react-circle-modal": "^0.0.2",
-    "react-dom": "17.0.2",
+    "react-dom": "^18.2.0",
     "react-hook-form": "^7.19.5",
     "react-icons": "^4.3.1",
     "react-phone-input-2": "^2.14.0",
@@ -26,7 +26,10 @@
     "styled-components": "^5.3.3"
   },
   "devDependencies": {
+    "@types/node": "^20.6.3",
+    "@types/react": "^18.0.4",
     "eslint": "7",
-    "eslint-config-next": "12.0.1"
+    "eslint-config-next": "^13.5.2",
+    "typescript": "^5.2.2"
   }
 }

@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { FiMenu, FiX, FiMoon, FiSun } from "react-icons/fi";
+import { useEffect, useState } from "react";
+import { FiMenu, FiX } from "react-icons/fi";
 import ButtonModalClientArea from "../ButtonModalClientArea";
 
 import styles from "./styles.module.scss";
@@ -16,47 +16,51 @@ export function Header() {
     height: undefined,
   });
 
-  useEffect(() => {
-    const handleResize = () => {
-      setSizeScreen({
-        width: window.innerWidth,
-        height: window.innerHeight,
-      });
-    };
-    handleResize();
-    window.addEventListener("resize", handleResize);
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     setSizeScreen({
+  //       width: window.innerWidth,
+  //       height: window.innerHeight,
+  //     });
+  //   };
+  //   handleResize();
+  //   window.addEventListener("resize", handleResize);
 
-    // TEMA
+  //   // TEMA
 
-    // Verifica se é a primeira vez que a pessoa acessa e seta o tema no storage como light, que é o tema padrão
-    const temeSelected = localStorage.getItem("theme");
-    if (temeSelected === null) {
-      localStorage.setItem("theme", "light");
-      
-      // dark mode is active?
-      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        setIsDarkModeActive(true);
-      }
+  //   // Verifica se é a primeira vez que a pessoa acessa e seta o tema no storage como light, que é o tema padrão
+  //   const temeSelected = localStorage.getItem("theme");
+  //   if (temeSelected === null) {
+  //     localStorage.setItem("theme", "light");
 
-    } else {
-      document.body.dataset.theme = temeSelected;
-      if (temeSelected === "dark") {
-        setIsDarkModeActive(true);
-      }
-    }
+  //     // dark mode is active?
+  //     if (
+  //       window.matchMedia &&
+  //       window.matchMedia("(prefers-color-scheme: dark)").matches
+  //     ) {
+  //       setIsDarkModeActive(true);
+  //     }
+  //   } else {
+  //     document.body.dataset.theme = temeSelected;
+  //     if (temeSelected === "dark") {
+  //       setIsDarkModeActive(true);
+  //     }
+  //   }
 
-    // Lida com a troca de tema automatica
-    const handleDarkMode = (e) => {
-      const newColorScheme = e.matches ? "dark" : "light";
-      setIsDarkModeActive(newColorScheme === "dark" ? true : false);
-    }
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', handleDarkMode);
+  //   // Lida com a troca de tema automatica
+  //   const handleDarkMode = (e) => {
+  //     const newColorScheme = e.matches ? "dark" : "light";
+  //     setIsDarkModeActive(newColorScheme === "dark" ? true : false);
+  //   };
+  //   window
+  //     .matchMedia("(prefers-color-scheme: dark)")
+  //     .addEventListener("change", handleDarkMode);
 
-    return () => {
-      window.removeEventListener("resize", handleResize);
-      window.removeEventListener("change", handleDarkMode);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("resize", handleResize);
+  //     window.removeEventListener("change", handleDarkMode);
+  //   };
+  // }, []);
 
   useEffect(() => {
     if (sizeScreen.width > 1020 && isResponsiveMenuOpen) {
@@ -64,17 +68,17 @@ export function Header() {
     }
   }, [sizeScreen.width, isResponsiveMenuOpen]);
 
-  useEffect(() => {
-    if (isDarkModeActive) {
-      localStorage.setItem("theme", "dark");
-      document.body.dataset.theme = "dark";
-    } else {
-      localStorage.setItem("theme", "light");
-      document.body.dataset.theme = "light";
-    }
+  // useEffect(() => {
+  //   if (isDarkModeActive) {
+  //     localStorage.setItem("theme", "dark");
+  //     document.body.dataset.theme = "dark";
+  //   } else {
+  //     localStorage.setItem("theme", "light");
+  //     document.body.dataset.theme = "light";
+  //   }
 
-    return () => {};
-  }, [isDarkModeActive]);
+  //   return () => {};
+  // }, [isDarkModeActive]);
 
   const menuToggleHandler = () => {
     if (
@@ -92,16 +96,12 @@ export function Header() {
       <div className={styles.header__content}>
         <div className={styles.header__content__logo}>
           <Link href="/">
-            <a>
-              <img
-                src={
-                  isDarkModeActive
-                    ? "/images/logoWhite.webp"
-                    : "/images/logo.webp"
-                }
-                alt="Logo Quality Systems"
-              />
-            </a>
+            <img
+              src={
+                isDarkModeActive ? "/images/logoWhite.png" : "/images/logo.png"
+              }
+              alt="Quality Systems"
+            />
           </Link>
         </div>
         <nav
@@ -109,72 +109,85 @@ export function Header() {
             isResponsiveMenuOpen ? styles.isMenu : ""
           }`}
         >
-          <ul>
+          {/* <ul>
             <li>
               {isDarkModeActive ? (
-                <div className={styles.themeColor} onClick={() => setIsDarkModeActive(false)} data-tooltip={"Tema claro"} data-flow="left" >
-                  <FiSun color="#ffffff"/>
+                <div
+                  className={styles.themeColor}
+                  onClick={() => setIsDarkModeActive(false)}
+                  data-tooltip={"Tema claro"}
+                  data-flow="left"
+                >
+                  <FiSun color="#ffffff" />
                 </div>
               ) : (
-                <div className={styles.themeColor} onClick={() => setIsDarkModeActive(true)} data-tooltip={"Tema escuro"} data-flow="left" >
+                <div
+                  className={styles.themeColor}
+                  onClick={() => setIsDarkModeActive(true)}
+                  data-tooltip={"Tema escuro"}
+                  data-flow="left"
+                >
                   <FiMoon />
                 </div>
               )}
             </li>
-          </ul>
+          </ul> */}
 
           <ul>
             <li>
-              <Link href="/">
-                <a
-                  className={router.pathname === "/" ? styles.active : ""}
-                  onClick={menuToggleHandler}
-                >
-                  Início
-                </a>
+              <Link
+                href="/"
+                className={router.pathname === "/" ? styles.active : ""}
+                onClick={menuToggleHandler}
+              >
+                Início
               </Link>
             </li>
           </ul>
 
           <ul>
             <li>
-              <Link href="/sobre">
-                <a
-                  className={router.pathname === "/sobre" ? styles.active : ""}
-                  onClick={menuToggleHandler}
-                >
-                  Sobre a Quality
-                </a>
+              <Link
+                href="/solucoes"
+                className={router.pathname === "/solucoes" ? styles.active : ""}
+                onClick={menuToggleHandler}
+              >
+                Soluções
               </Link>
             </li>
           </ul>
 
           <ul>
             <li>
-              <Link href="/produtos">
-                <a
-                  className={
-                    router.pathname === "/produtos" ? styles.active : ""
-                  }
-                  onClick={menuToggleHandler}
-                >
-                  Produtos
-                </a>
+              <Link
+                href="/sobre"
+                className={router.pathname === "/sobre" ? styles.active : ""}
+                onClick={menuToggleHandler}
+              >
+                A Empresa
               </Link>
             </li>
           </ul>
 
           <ul>
             <li>
-              <Link href="/contato">
-                <a
-                  className={
-                    router.pathname === "/contato" ? styles.active : ""
-                  }
-                  onClick={menuToggleHandler}
-                >
-                  Contato
-                </a>
+              <Link
+                className={router.pathname === "#clientes" ? styles.active : ""}
+                href="/#clientes"
+              >
+                Clientes
+              </Link>
+            </li>
+          </ul>
+
+          <ul>
+            <li>
+              <Link
+                href="/contato"
+                className={router.pathname === "/contato" ? styles.active : ""}
+                onClick={menuToggleHandler}
+              >
+                Contato
               </Link>
             </li>
           </ul>
@@ -194,11 +207,11 @@ export function Header() {
 
     // <header className={styles.container}>
     //   <div className={styles.wrapper}>
-    //   <Link href="/" ><a><img src="/images/logo.png" alt="Logo Quality Systems" /></a></Link>
+    //   <Link href="/" ><img src="/images/logo.png" alt="Logo Quality Systems" /></a></Link>
     //     <nav>
     //       <Link href="/" ><a className={router.pathname === '/' ? styles.active : ''}>Início</a></Link>
     //       <Link href="/sobre" ><a className={router.pathname === '/sobre' ? styles.active : ''}>Sobre a Quality</a></Link>
-    //       <Link href="/produtos" ><a className={router.pathname === '/produtos' ? styles.active : ''}>Produtos</a></Link>
+    //       <Link href="/solucoes" ><a className={router.pathname === '/solucoes' ? styles.active : ''}>solucoes</a></Link>
     //       <Link href="/contato" ><a className={router.pathname === '/contato' ? styles.active : ''}>Contato</a></Link>
     //     </nav>
     //     <ButtonModalClientArea/>

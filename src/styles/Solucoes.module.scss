@@ -30,7 +30,7 @@
         background-color: #ffffff0d;
 
         .boxTopTitles {
-          background-color: var(--blue-400);
+          background-color: var(--blue-350);
           border-radius: 0.8rem;
           padding: 1.2rem;
           margin-bottom: 1.5rem;
@@ -51,30 +51,31 @@
         ul {
           li {
             list-style-type: none;
-            font-size: 1.5rem;
+            font-size: 1rem;
             padding: 0.5rem 1rem;
             color: var(--gray-600);
             cursor: pointer;
             border-radius: 0.3rem;
             transition: all 0.2s ease;
+            margin: 0.5rem 0rem;
 
             & + li {
               margin-top: 1px;
             }
 
             &:hover {
-              color: #ffffff;
-              background-color: var(--blue-350);
+              color: #676767;
+              background-color: var(--blue-50);
               border-left: 10px solid var(--blue-500);
             }
           }
           .categoryActive {
-            color: #ffffff;
-            background-color: var(--blue-350);
+            color: #555555;
+            background-color: var(--blue-50);
             border-left: 10px solid var(--blue-500);
 
             &:hover {
-              background-color: var(--blue-350);
+              background-color: var(--blue-50);
             }
           }
         }

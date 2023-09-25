@@ -1,35 +1,38 @@
 import Link from "next/link";
 import { FiSliders, FiThumbsUp } from "react-icons/fi";
 
+import { AccordionRA } from "../components/AccordionRA";
 import { BoxIconLeft } from "../components/BoxIconLeft";
 import { BoxNumber } from "../components/BoxNumber";
-import { AccordionRA } from "../components/AccordionRA";
-import { Footer } from "../components/Footer";
 import { ButtonGreen } from "../components/ButtonGreen";
 import { Carousel } from "../components/Carousel";
+import { Footer } from "../components/Footer";
+import HeadCustom from "../components/HeadCustom";
 import SlideShow from "../components/SlideShow";
 import SlideShowVertical from "../components/SlideShowVertical";
-import HeadCustom from "../components/HeadCustom";
 
 import styles from "../styles/Index.module.scss";
 
 export default function Home() {
   return (
     <>
-      <HeadCustom pageName="Início" />
-      
+      <HeadCustom
+        pageName="Quality Systems"
+        description="Sistema para Parques e Clubes"
+      />
+
       <main className={styles.container}>
         {/* BANNER */}
         <section className={styles.wrapperBanner}>
           <div className={styles.banner}>
             <div className={styles.info}>
-              <h1>Quality Automação de Clubes</h1>
+              <h1>O Quality ERP</h1>
               <p>
-                <strong>Desde 1990</strong> oferecendo{" "}
-                <strong>soluções inovadoras</strong> para gestão e automação de{" "}
-                <strong>clubes, agremiações, sindicatos</strong> e{" "}
-                <strong>academias</strong> para mais de{" "}
-                <strong>200 clientes</strong> em todo o Brasil.
+                Solução integrada de software e hardware para clubes, parques e
+                afins. A solução é dividida por módulos que poderão ser
+                compostos conforme a característica do ambiente, capacidade de
+                investimento e viabilidade de operação de cada empreendimento,
+                havendo a possibilidade de mudança ao longo do seu uso.
               </p>
               <a href="#saibamais">
                 <button type="button">Clique e saiba mais</button>
@@ -56,13 +59,14 @@ export default function Home() {
             <div className={styles.info}>
               <h1>App do Sócio</h1>
               <p>
-                Tenha o <strong>aplicativo personalizado</strong> do seu clube, que proporciona
-                aos seus sócios vários benefícios e facilidades, como: gerenciar
-                seus dados de pagamentos, dependentes, dados pessoais, notícias
-                do clube e muito mais. O App do Sócio gera a <strong>confiança</strong> e
-                <strong> agilidade</strong> que seu clube precisa!
+                Tenha o <strong>aplicativo personalizado</strong> do seu clube,
+                que proporciona aos seus sócios vários benefícios e facilidades,
+                como: gerenciar seus dados de pagamentos, dependentes, dados
+                pessoais, notícias do clube e muito mais. O App do Sócio gera a{" "}
+                <strong>confiança</strong> e<strong> agilidade</strong> que seu
+                clube precisa!
               </p>
-              <p>
+              <div>
                 <strong>Alguns recursos do App do Sócio:</strong>
                 <ul>
                   <li>Aplicativos disponíveis para Android e iOS.</li>
@@ -74,23 +78,27 @@ export default function Home() {
                     do app.
                   </li>
                 </ul>
-              </p>
+              </div>
               <div className={styles.appStoreBadges}>
-                <Link href="https://play.google.com/store/apps/developer?id=Quality+Systems+LTDA&hl=pt-BR">
-                  <a target="_blank" rel="noreferrer">
-                    <img
-                      src="/images/googlePlayBadge.png"
-                      alt="Google Play Store"
-                    />
-                  </a>
+                <Link
+                  href="https://play.google.com/store/apps/developer?id=Quality+Systems+LTDA&hl=pt-BR"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img
+                    src="/images/googlePlayBadge.png"
+                    alt="Google Play Store"
+                  />
                 </Link>
-                <Link href="https://apps.apple.com/gb/developer/quality-systems/id1531946818#see-all/i-phone-apps">
-                  <a target="_blank" rel="noreferrer">
-                    <img
-                      src="/images/appStoreBadge.png"
-                      alt="Google Play Store"
-                    />
-                  </a>
+                <Link
+                  href="https://apps.apple.com/gb/developer/quality-systems/id1531946818#see-all/i-phone-apps"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img
+                    src="/images/appStoreBadge.png"
+                    alt="Google Play Store"
+                  />
                 </Link>
               </div>
             </div>
@@ -98,7 +106,7 @@ export default function Home() {
         </section>
 
         {/* CLIENTES QUALITY */}
-        <section className={styles.wrapperCustomers}>
+        <section className={styles.wrapperCustomers} id="clientes">
           <div className={styles.content}>
             <h3>Clientes que confiam na Quality!</h3>
             <div className={styles.sliderWrapper}>

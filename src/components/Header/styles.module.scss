@@ -183,6 +183,7 @@
             padding: 5px 5px 2px 5px;
             border-radius: 13px;
             cursor: pointer;
+            border-bottom: solid 1px #3e7cc5;
           }
 
           a {
@@ -190,47 +191,44 @@
             position: relative;
             text-decoration: none;
             color: inherit;
-            padding: 0.55rem 1.1rem;
-            border-radius: 0.5rem;
+            padding: 0.7rem 1.1rem;
             // transition: 0.3s ease all;
             font-size: 1.1rem;
 
             &:hover {
-              background: #3e7cc520;
+              border-bottom: 3px solid #3e7cc533;
             }
 
             &:active {
-              border-radius: 0.5rem;
-              background: #3e7cc555;
+              border-bottom: 3px solid #3e7cc533;
             }
 
             &.active {
-              background-color: #3e7cc533;
-              // border: 2px solid #3e7cc555;
+              //background-color: #3e7cc533;
+               border-bottom: 3px solid #3e7cc533;
             }
           }
         }
       }
 
       button {
-        background-color: var(--blue-500);
+         background-color: transparent !important;
         border: none;
         display: flex;
         justify-content: center;
         align-items: center;
         padding: 0.7rem 1.1rem;
-        color: var(--white);
-        border-radius: 0.7rem;
+        // color: var(--white);
+        color: inherit;
         transition: all 0.2s ease;
 
-        &:hover {
-          filter: brightness(1.1);
-        }
+        // &:hover {
+        //   filter: brightness(1.1);
+        // }
 
         .userIcon {
           width: 20px;
           height: 20px;
-
           margin-right: 0.5rem;
         }
       }
