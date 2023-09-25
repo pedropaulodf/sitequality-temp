@@ -5,7 +5,7 @@
 
     .banner {
       width: 100%;
-      max-width: 1200px;
+      max-width: calc(1200px + 4rem);
       margin: 0 auto;
       padding: 4rem 2rem;
       position: relative;
@@ -33,9 +33,9 @@
           background-color: var(--blue-500-40);
           color: var(--blue-500);
           font-size: 1.2rem;
-          -webkit-box-shadow: 0px 16px 21px 0px rgba(232,232,232,0.81);
-          -moz-box-shadow: 0px 16px 21px 0px rgba(232,232,232,0.81);
-          box-shadow: 0px 16px 21px 0px  rgba(232,232,232,0.81);
+          -webkit-box-shadow: 0px 16px 21px 0px rgba(232, 232, 232, 0.81);
+          -moz-box-shadow: 0px 16px 21px 0px rgba(232, 232, 232, 0.81);
+          box-shadow: 0px 16px 21px 0px rgba(232, 232, 232, 0.81);
           transition: all 0.2s ease;
 
           &:hover {
@@ -79,7 +79,7 @@
 
     .strip {
       width: 100%;
-      max-width: 1200px;
+      max-width: calc(1200px + 4rem);
       margin: 0 auto;
       padding: 4rem 2rem;
       position: relative;
@@ -92,6 +92,7 @@
       .info {
         align-self: center;
         grid-area: info;
+
         h1 {
           font-size: 3rem;
           color: var(--blue-500);
@@ -102,14 +103,15 @@
           font-size: 1.3rem;
           color: var(--gray-600);
           margin: 1rem 0;
+        }
 
+        div {
           ul {
             margin-top: 1rem;
             margin-left: 1.3rem;
             font-size: 1.2rem;
           }
         }
-
         .appStoreBadges {
           display: flex;
           gap: 1rem;
@@ -271,7 +273,7 @@
   }
 }
 
-.btnGreenContact{
+.btnGreenContact {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -313,8 +315,8 @@
         grid-template-columns: 1fr;
         gap: 3rem 0;
         grid-template-areas: "info" "sliderWrapper";
-  
-        .sliderWrapper {  
+
+        .sliderWrapper {
           .bgSliderCircle {
             width: 100%;
             min-width: 100%;
@@ -336,7 +338,6 @@
     // Diferenciais
     .wrapperDiferentials {
       .content {
-
         padding: 3rem 2rem 4rem 2rem;
 
         .gridBoxes {

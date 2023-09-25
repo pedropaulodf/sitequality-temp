@@ -7,11 +7,37 @@
 
   margin-top: 3rem;
 
-  .bgLogo {
-    padding: 3rem 1rem;
-    
-    img {
+  .subContainer {
+    flex-direction: row;
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between;
+
+    .bgLogo {
+      padding: 3rem 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width: 100%;
+      margin-right: -150px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .stoneLogo {
+      padding: 3rem 1rem;
+      max-width: 200px;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+
+      img {
+        width: 100%;
+      }
     }
   }
 
@@ -22,5 +48,23 @@
     padding: 1rem 1rem;
 
     color: var(--white);
+  }
+}
+
+@media (max-width: 720px) {
+  .container {
+    .subContainer {
+      flex-direction: column;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .bgLogo {
+        padding: 2rem 1rem;
+        margin-right: 0;
+      }
+      .stoneLogo {
+        padding: 0rem 1rem 2rem 1rem;
+      }
+    }
   }
 }

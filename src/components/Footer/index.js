@@ -4,10 +4,15 @@ import styles from "./styles.module.scss";
 export function Footer() {
   return (
     <footer className={styles.container}>
-      <div className={styles.bgLogo}>
-        <Link href="/" className={styles.navLink}>
-          <img src="/images/logoWhite.png" alt="Logo Quality Systems" />
-        </Link>
+      <div className={styles.subContainer}>
+        <div className={styles.bgLogo}>
+          <Link href="/" className={styles.navLink}>
+            <img src="/images/logoWhite.png" alt="Logo Quality Systems" />
+          </Link>
+        </div>
+        <div className={styles.stoneLogo}>
+          <img src="/images/parceirosLogos/stone-partner.png" alt="" />
+        </div>
       </div>
       <div className={styles.bgRights}>
         <p>
