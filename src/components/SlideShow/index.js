@@ -8,20 +8,20 @@ const SlideShow = () => {
   const slideRef = useRef();
 
   const slideImages = [
-    "/images/sliderHomeSistema/bannerGestao (1).png",
-    "/images/sliderHomeSistema/bannerGestao (2).png",
-    "/images/sliderHomeSistema/bannerGestao (3).png",
-    "/images/sliderHomeSistema/bannerGestao (4).png",
-    "/images/sliderHomeSistema/bannerGestao (5).png",
-    "/images/sliderHomeSistema/bannerGestao (6).png",
-    "/images/sliderHomeSistema/bannerGestao (7).png",
-    "/images/sliderHomeSistema/bannerGestao (8).png",
-    "/images/sliderHomeSistema/bannerGestao (9).png",
-    "/images/sliderHomeSistema/bannerGestao (10).png",
-    "/images/sliderHomeSistema/bannerGestao (11).png",
-    "/images/sliderHomeSistema/bannerGestao (12).png",
-    "/images/sliderHomeSistema/bannerGestao (13).png",
-    "/images/sliderHomeSistema/bannerGestao (14).png",
+    "/images/sliderHomeSistema/bannerGestao1.png",
+    "/images/sliderHomeSistema/bannerGestao2.png",
+    "/images/sliderHomeSistema/bannerGestao3.png",
+    "/images/sliderHomeSistema/bannerGestao4.png",
+    "/images/sliderHomeSistema/bannerGestao5.png",
+    "/images/sliderHomeSistema/bannerGestao6.png",
+    "/images/sliderHomeSistema/bannerGestao7.png",
+    "/images/sliderHomeSistema/bannerGestao8.png",
+    "/images/sliderHomeSistema/bannerGestao9.png",
+    "/images/sliderHomeSistema/bannerGestao10.png",
+    "/images/sliderHomeSistema/bannerGestao11.png",
+    "/images/sliderHomeSistema/bannerGestao12.png",
+    "/images/sliderHomeSistema/bannerGestao13.png",
+    "/images/sliderHomeSistema/bannerGestao14.png",
   ];
 
   const properties = {
