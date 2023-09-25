@@ -36,7 +36,7 @@ export default function Contato() {
         pais: formData.pais,
         estado: formData.estado,
         cidade: formData.cidade,
-        // _cc: "email1@gmail.com,email2@gmail.com"
+        _cc: "eduardo@qualitysys.com.br,pedro@qualitysys.com.br",
       }),
     })
       .then((response) => response.json())
@@ -90,11 +90,6 @@ export default function Contato() {
             <div className={styles.form}>
               <h3>Entre em contato conosco:</h3>
               <form onSubmit={handleSubmit(onSubmit)}>
-                <input
-                  type="hidden"
-                  name="_cc"
-                  value="eduardo@qualitysys.com.br,pedro@qualitysys.com.br"
-                />
                 <Controller
                   name="assunto"
                   control={control}
