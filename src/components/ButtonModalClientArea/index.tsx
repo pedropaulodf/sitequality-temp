@@ -62,7 +62,7 @@ const ButtonModalClientArea = React.forwardRef<ButtonModalClientAreaProps>(
         className={styles.openButtom}
         // onClick={(e) => handleOpenModal(onClick(e))}
         onClick={(e) =>
-          window.open("https://www.qualitysys.com.br/novo/area-do-cliente/")
+          window.open("http://191.252.197.76/novo/area-do-cliente/")
         }
         disabled={router.pathname === "/areacliente" ? true : false}
       >
