@@ -14,7 +14,7 @@ export function ButtonCircleArrow({
         <div
           {...rest}
           className={styles.btn}
-          style={{ backgroundColor: bgColor }}
+          style={{ backgroundColor: bgColor, zIndex: 100 }}
         >
           {left ? <FiArrowLeft /> : <FiArrowRight />}
         </div>
@@ -22,7 +22,7 @@ export function ButtonCircleArrow({
         <div
           {...rest}
           className={styles.btn}
-          style={{ backgroundColor: bgColor }}
+          style={{ backgroundColor: bgColor, zIndex: 100 }}
         >
           {left ? <FiArrowLeft /> : <FiArrowRight />}
         </div>

@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   src: url(../fonts/Roboto-Regular.ttf);
 }
 
@@ -52,7 +52,7 @@
 // }
 body[data-theme="light"] {
   --bg-color: #ffffff;
-  --bg-gradient-strip-color: #f7fafd;
+  --bg-gradient-strip-color: #f0f8ff;
   --bg-menu-color: #ffffffeb;
   --white: #ffffff;
   --gray-500: #8e8e8e;
@@ -69,7 +69,7 @@ body[data-theme="light"] {
 }
 
 body[data-theme="dark"] {
-  --bg-color: #00142D;
+  --bg-color: #00142d;
   --bg-gradient-strip-color: #041a36;
   --bg-menu-color: #181818eb;
   --white: #ffffff;
@@ -164,7 +164,8 @@ a {
 }
 
 /* Styles SlideShow */
-.react-slideshow-wrapper.slide,.react-slideshow-fade-wrapper  {
+.react-slideshow-wrapper.slide,
+.react-slideshow-fade-wrapper {
   border-radius: 0.6rem;
   z-index: 0;
 }
