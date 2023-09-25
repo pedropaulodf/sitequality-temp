@@ -8,16 +8,20 @@ const SlideShow = () => {
   const slideRef = useRef();
 
   const slideImages = [
-    "/images/sliderHomeSistema/banner1.webp",
-    "/images/sliderHomeSistema/banner2.webp",
-    "/images/sliderHomeSistema/banner3.webp",
-    "/images/sliderHomeSistema/banner4.webp",
-    "/images/sliderHomeSistema/banner5.webp",
-    "/images/sliderHomeSistema/banner6.webp",
-    "/images/sliderHomeSistema/banner7.webp",
-    "/images/sliderHomeSistema/banner8.webp",
-    "/images/sliderHomeSistema/banner9.webp",
-    "/images/sliderHomeSistema/banner10.webp",
+    "/images/sliderHomeSistema/bannerGestao (1).png",
+    "/images/sliderHomeSistema/bannerGestao (2).png",
+    "/images/sliderHomeSistema/bannerGestao (3).png",
+    "/images/sliderHomeSistema/bannerGestao (4).png",
+    "/images/sliderHomeSistema/bannerGestao (5).png",
+    "/images/sliderHomeSistema/bannerGestao (6).png",
+    "/images/sliderHomeSistema/bannerGestao (7).png",
+    "/images/sliderHomeSistema/bannerGestao (8).png",
+    "/images/sliderHomeSistema/bannerGestao (9).png",
+    "/images/sliderHomeSistema/bannerGestao (10).png",
+    "/images/sliderHomeSistema/bannerGestao (11).png",
+    "/images/sliderHomeSistema/bannerGestao (12).png",
+    "/images/sliderHomeSistema/bannerGestao (13).png",
+    "/images/sliderHomeSistema/bannerGestao (14).png",
   ];
 
   const properties = {
