@@ -57,7 +57,7 @@ export default function Home() {
               </div>
             </div>
             <div className={styles.info}>
-              <h1>App do Sócio</h1>
+              <h1>Aplicativo do Sócio</h1>
               <p>
                 Tenha o <strong>aplicativo personalizado</strong> do seu clube,
                 que proporciona aos seus sócios vários benefícios e facilidades,
