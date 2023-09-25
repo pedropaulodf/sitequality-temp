@@ -7,6 +7,19 @@ export const Carousel = (props) => {
   const customerLogo = useRef(null);
 
   const CLIENTS_LOGOS = [
+    {
+      name: "Assis Tênis Clube",
+      imagePath: "/images/carousel/clientsLogos/atc.png",
+    },
+    {
+      name: "Bauru Tênis Clube",
+      imagePath: "/images/carousel/clientsLogos/btc.png",
+    },
+    { name: "ASMUBE", imagePath: "/images/carousel/clientsLogos/asmube.png" },
+    {
+      name: "Thermas da Mata",
+      imagePath: "/images/carousel/clientsLogos/thermasdamata.jpg",
+    },
     { name: "Assary", imagePath: "/images/carousel/clientsLogos/assary.webp" },
     {
       name: "Caiçaras Country Clube",
