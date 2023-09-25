@@ -32,6 +32,7 @@ export default function Contato() {
       },
       body: JSON.stringify({
         _subject: "Novo e-mail enviado do site QualitySys",
+        _cc: "eduardo@qualitysys.com.br",
         nome: formData.nome,
         email: formData.email,
         telefone: formData.telefone,
@@ -40,7 +41,6 @@ export default function Contato() {
         pais: formData.pais,
         estado: formData.estado,
         cidade: formData.cidade,
-        _cc: "pedro@qualitysys.com.br",
       }),
     })
       .then((response) => response.json())
