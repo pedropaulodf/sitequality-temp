@@ -69,14 +69,18 @@ export default function Home() {
               <div>
                 <strong>Alguns recursos do App do Sócio:</strong>
                 <ul>
-                  <li>Aplicativos disponíveis para Android e iOS.</li>
-                  <li>Carteirinha digital, via QR Code, na palma da mão.</li>
-                  <li>Gerenciar as carteirinhas dos dependentes do sócio.</li>
-                  <li>Gerenciar todos os débitos diretamente do celular.</li>
-                  <li>
-                    Recurso de FaceID ou TouchID para maior segurança no acesso
-                    do app.
-                  </li>
+                  <li>Aplicativos disponíveis para Android e iOS;</li>
+                  <li>Carteirinha digital, via QR Code, na palma da mão;</li>
+                  <li>Gerenciar as carteirinhas dos dependentes do sócio;</li>
+                  <li>Gerenciar todos os débitos diretamente do celular;</li>
+                  <li>Gerenciar Convites;</li>
+                  <li>Fazer Reservas;</li>
+                  <li>Realizar Recargas do pré-pago;</li>
+                  <li>Pagamentos via Boleto e PIX;</li>
+                  <li>Consultar seu consumo;</li>
+                  <li>Notificações de Movimentações via Push;</li>
+                  <li>Modalidades e Treinos;</li>
+                  <li>White Label e vários outros recursos!</li>
                 </ul>
               </div>
               <div className={styles.appStoreBadges}>
