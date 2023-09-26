@@ -11,7 +11,10 @@ export function Footer() {
           </Link>
         </div>
         <div className={styles.stoneLogo}>
-          <img src="/images/parceirosLogos/stone-partner.png" alt="" />
+          <img
+            src="https://storage.googleapis.com/partnerhub_partner_badges_prod/L_641cc7353887840019614783.png"
+            alt="Stone Partner Badge"
+          />
         </div>
       </div>
       <div className={styles.bgRights}>
