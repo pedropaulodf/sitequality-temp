@@ -1,15 +1,23 @@
-import { useRouter } from "next/router";
-import React, { useState } from "react";
-// import { ReactCircleModal } from "react-circle-modal";
-// import { Controller, useForm } from "react-hook-form";
-import { FiLock, FiUser, FiX } from "react-icons/fi";
-// import { InputIcon } from "../InputIcon";
-
-import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+import { FiLock, FiUser, FiX } from "react-icons/fi";
+import React, { useState } from "react";
 import { toastError, toastSuccess } from "../../utils/reactToastify";
+
 import styles from "./styles.module.scss";
+import { toast } from "react-toastify";
+import { useRouter } from "next/router";
+
+// import { ReactCircleModal } from "react-circle-modal";
+// import { Controller, useForm } from "react-hook-form";
+
+// import { InputIcon } from "../InputIcon";
+
+
+
+
+
+
 
 interface ButtonModalClientAreaProps {
   handleCloseMenu: () => void;
@@ -62,7 +70,7 @@ const ButtonModalClientArea = React.forwardRef<ButtonModalClientAreaProps>(
         className={styles.openButtom}
         // onClick={(e) => handleOpenModal(onClick(e))}
         onClick={(e) =>
-          window.open("http://191.252.197.76/novo/area-do-cliente/")
+          window.open("https://qualitysys.com.br/novo/area-do-cliente")
         }
         disabled={router.pathname === "/areacliente" ? true : false}
       >

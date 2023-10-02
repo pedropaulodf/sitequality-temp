@@ -24,7 +24,7 @@ export default function HeadCustom({ pageName, description }: HeadCustomProps) {
       <meta property="og:title" content="Quality Systems" />
       <meta
         property="og:image"
-        content="https://quality-site.vercel.app/images/metaogimage.jpg"
+        content="https://quality-site.vercel.app/images/metaogimage.png"
       />
        
       <meta

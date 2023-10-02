@@ -1,10 +1,10 @@
-import Link from "next/link";
-import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
-import ButtonModalClientArea from "../ButtonModalClientArea";
+import { useEffect, useState } from "react";
 
+import ButtonModalClientArea from "../ButtonModalClientArea";
+import Link from "next/link";
 import styles from "./styles.module.scss";
+import { useRouter } from "next/router";
 
 export function Header() {
   const router = useRouter();
@@ -172,8 +172,9 @@ export function Header() {
           <ul>
             <li>
               <Link
-                className={router.pathname === "#clientes" ? styles.active : ""}
-                href="/#clientes"
+                href="/clientes"
+                className={router.pathname === "/clientes" ? styles.active : ""}
+                onClick={menuToggleHandler}
               >
                 Clientes
               </Link>

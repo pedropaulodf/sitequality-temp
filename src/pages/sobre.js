@@ -1,7 +1,7 @@
-import Head from "next/head";
 import { Footer } from "../components/Footer";
+import Head from "next/head";
 import HeadCustom from "../components/HeadCustom";
-
+import Image from "next/image";
 import styles from "../styles/Sobre.module.scss";
 
 export default function Sobre() {
@@ -66,7 +66,7 @@ export default function Sobre() {
             <h3>Tecnologias</h3>
             <div className={styles.techLogoBox}>
               {TECH_LOGOS.map((tech, index) => (
-                <img key={index} src={tech.imagemPath} alt={tech.alt} />
+                <Image width={100} height={100} key={index} src={tech.imagemPath} alt={tech.alt} />
               ))}
             </div>
           </div>
@@ -74,7 +74,7 @@ export default function Sobre() {
             <h3>Certificados</h3>
             <div className={styles.parceirosLogoBox}>
               {PARCEIROS_LOGOS.map((parceiro, index) => (
-                <img key={index} src={parceiro.imagemPath} alt={parceiro.alt} />
+                <Image width={100} height={100} key={index} src={parceiro.imagemPath} alt={parceiro.alt} />
               ))}
             </div>
           </div>
