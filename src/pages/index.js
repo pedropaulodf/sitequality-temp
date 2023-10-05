@@ -3,8 +3,10 @@ import { FiSliders, FiThumbsUp } from "react-icons/fi";
 import { AccordionRA } from "../components/AccordionRA";
 import { BoxIconLeft } from "../components/BoxIconLeft";
 import { ButtonGreen } from "../components/ButtonGreen";
+import Clientes from "./clientes.tsx";
 import { Footer } from "../components/Footer";
 import HeadCustom from "../components/HeadCustom";
+import Image from "next/image";
 import Link from "next/link";
 import SlideShow from "../components/SlideShow";
 import SlideShowVertical from "../components/SlideShowVertical";
@@ -86,7 +88,9 @@ export default function Home() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <img
+                  <Image
+                    width={138}
+                    height={47}
                     src="/images/googlePlayBadge.png"
                     alt="Google Play Store"
                   />
@@ -96,7 +100,9 @@ export default function Home() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <img
+                  <Image
+                    width={138}
+                    height={47}
                     src="/images/appStoreBadge.png"
                     alt="Google Play Store"
                   />
@@ -105,6 +111,10 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* CLIENTES */}
+
+        <Clientes />
 
         {/* DIFERENCIAIS */}
         <section className={styles.wrapperDiferentials}>
@@ -131,7 +141,10 @@ export default function Home() {
             <h3>Conheça os Recursos</h3>
             <div className={styles.grid}>
               <div className={styles.imgResources}>
-                <img src="/images/recursos.webp" alt="Recursos" />
+                <Image
+                width={368}
+                height={523}
+                src="/images/recursos.webp" alt="Recursos" />
                 {/* <ButtonOutlined href="/produtos" text="Veja todos os produtos" /> */}
               </div>
               <div>
