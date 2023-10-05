@@ -1,15 +1,41 @@
-import { useForm, Controller } from "react-hook-form";
+import { Controller, useForm } from "react-hook-form";
 import { toastError, toastSuccess } from "../utils/reactToastify";
+import { useRef, useState } from "react";
 
 import { Footer } from "../components/Footer";
-import { Input } from "../components/Input";
 import GoogleMapQuality from "../components/GoogleMapQuality";
 import HeadCustom from "../components/HeadCustom";
-
+import { Input } from "../components/Input";
+import emailjs from "@emailjs/browser";
 import styles from "../styles/Contato.module.scss";
-import { useState } from "react";
 
 export default function Contato() {
+  const form = useRef();
+
+  const sendEmail = () => {
+    setIsSending(true);
+    emailjs
+      .sendForm(
+        process.env.NEXT_PUBLIC_SERVICE_ID,
+        process.env.NEXT_PUBLIC_TEMPLATE_ID,
+        form.current,
+        process.env.NEXT_PUBLIC_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          setIsSending(false);
+          toastSuccess("E-mail enviado com sucesso!");
+          console.log(result.text);
+          return false;
+        },
+        (error) => {
+          setIsSending(false);
+          toastError("Houve um erro ao enviar o Email! Tente novamente.");
+          console.log(error.text);
+        }
+      );
+  };
+
   const [isSending, setIsSending] = useState(false);
 
   const {
@@ -18,72 +44,6 @@ export default function Contato() {
     control,
     formState: { errors },
   } = useForm();
-
-  const onSubmit = (formData) => {
-    setIsSending(true);
-    // alert(JSON.stringify(formData));
-
-    // fetch("https://formsubmit.co/ajax/seueemailaqui@email.com", {
-    fetch("https://formsubmit.co/ajax/297b0b7ab78bd0b12cca451561925b3d", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify({
-        _subject: "Novo e-mail enviado do site QualitySys",
-        _cc: "eduardo@qualitysys.com.br",
-        nome: formData.nome,
-        email: formData.email,
-        telefone: formData.telefone,
-        assunto: formData.assunto,
-        mensagem: formData.mensagem,
-        pais: formData.pais,
-        estado: formData.estado,
-        cidade: formData.cidade,
-      }),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        if (data && data.success) {
-          toastSuccess("E-mail enviado!", 3000);
-        }
-        setIsSending(false);
-      })
-      .catch((error) => {
-        console.log(error);
-        if (error) {
-          toastError("E-mail não foi enviado!", 3000);
-        }
-        setIsSending(false);
-      });
-  };
-
-  // const beforeMaskedStateChange = (states) => {
-
-  //   let { value } = states.currentState;
-
-  //   const newValue = value.replace(/[^0-9]/g, "");
-  //   if (newValue.length < 10) {
-  //     return states.nextState;
-  //   }
-
-  //   if (newValue.length === 10) {
-  //     value = newValue.replace(/^(\d{2})(\d{4})(\d{4})$/, "($1) $2-$3");
-  //   } else if (newValue.length > 10) {
-  //     value = newValue.replace(/^(\d{2})(\d{5})(\d{4})(\d*)$/, "($1) $2-$3");
-  //   }
-
-  //   return {
-  //     value: value,
-  //     selection: {
-  //       start: value.length,
-  //       end: value.length,
-  //     },
-  //   };
-  // };
-
-  // https://formsubmit.co/documentation
 
   return (
     <>
@@ -95,9 +55,9 @@ export default function Contato() {
           <div className={styles.content}>
             <div className={styles.form}>
               <h3>Entre em contato conosco:</h3>
-              <form onSubmit={handleSubmit(onSubmit)}>
+              <form ref={form} onSubmit={handleSubmit(sendEmail)}>
                 <Controller
-                  name="assunto"
+                  name="subject"
                   control={control}
                   rules={{ required: true }}
                   render={({ field }) => (
@@ -110,7 +70,7 @@ export default function Contato() {
                   )}
                 />
                 <Controller
-                  name="nome"
+                  name="name"
                   control={control}
                   rules={{ required: true }}
                   render={({ field }) => (
@@ -123,7 +83,7 @@ export default function Contato() {
                   )}
                 />
                 <Controller
-                  name="pais"
+                  name="country"
                   control={control}
                   rules={{ required: true }}
                   defaultValue="Brasil"
@@ -137,7 +97,7 @@ export default function Contato() {
                   )}
                 />
                 <Controller
-                  name="estado"
+                  name="state"
                   control={control}
                   rules={{ required: true }}
                   render={({ field }) => (
@@ -150,7 +110,7 @@ export default function Contato() {
                   )}
                 />
                 <Controller
-                  name="cidade"
+                  name="city"
                   control={control}
                   rules={{ required: true }}
                   render={({ field }) => (
@@ -163,7 +123,7 @@ export default function Contato() {
                   )}
                 />
                 <Controller
-                  name="email"
+                  name="user_email"
                   control={control}
                   rules={{
                     required: true,
@@ -179,9 +139,8 @@ export default function Contato() {
                   )}
                 />
                 <Controller
-                  name="telefone"
+                  name="phone_number"
                   control={control}
-                  defaultValue=""
                   rules={{ required: true }}
                   render={({ field }) => (
                     <Input
@@ -193,7 +152,7 @@ export default function Contato() {
                   )}
                 />
                 <Controller
-                  name="mensagem"
+                  name="message"
                   control={control}
                   rules={{ required: true }}
                   render={({ field }) => (
