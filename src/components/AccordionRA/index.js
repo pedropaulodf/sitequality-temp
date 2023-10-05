@@ -6,20 +6,21 @@ import {
   AccordionItemPanel,
 } from "react-accessible-accordion";
 import {
-  FiUsers,
   FiCoffee,
   FiDollarSign,
-  FiUserCheck,
-  FiShield,
   FiFileText,
   FiMonitor,
+  FiShield,
+  FiUserCheck,
+  FiUsers,
 } from "react-icons/fi";
+
 import styles from "./styles.module.scss";
 
 // React Accessible Accordion
 export function AccordionRA() {
   return (
-    <Accordion className={styles.accordion} preExpanded={["1"]}>
+    <Accordion className={styles.accordion} allowZeroExpanded allowMultipleExpanded preExpanded={["1"]}>
       <AccordionItem uuid="1" className={styles.accordion__item}>
         <AccordionItemHeading className={styles.accordion__item_heading}>
           <AccordionItemButton className={styles.accordion__button}>
